@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <div>
+        <div>
+            <label>Enter Email Message: </label>
+            <input type="text" id="email" placeholder="Enter your email message">
+        </div>
+        <div>
+            <label>Phone: </label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+        </div>
+        <div>
+            <label>Enter WhatsApp Message: </label>
+            <input type="text" id="whatsapp" placeholder="Enter your WhatsApp Message">
+        </div>
+
+
+        <button onclick="handleClickCall()">Call Us</button>
+        <button onclick="handleWp()">WhatsApp Me</button>
+        <button onclick="handleMail()">Mail Us</button>
+
+    </div>
+
+    <script>
+        function handleMail() {
+            const email = document.getElementById('email').value;
+            window.location.href = `mailto:arijit1087.be22@chitkarauniversity.edu.in/?body=${encodeURIComponent(email)};
+        `}
+
+        function handleClickCall() {
+            const phone = document.getElementById('phone').value;
+            window.location.href = `tel:+91${phone}`;
+        }
+
+        function handleWp() {
+            const whatsapp = document.getElementById('whatsapp').value;
+            window.location.href = `https://wa.me/7439120030/?text=${encodeURIComponent(whatsapp)}`;
+        }
+
+
+    </script>
+</body>
+</html>
